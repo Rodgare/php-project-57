@@ -37,7 +37,7 @@ jobs:
         run: php artisan key:generate
 
       - name: Run Migrations
-        run: php artisan migrate --force --seed # Уберите --seed, если не хотите заполнять базу сидами для тестов
+        run: php artisan migrate --force --seed
 
       - name: Run Tests (PHPUnit)
         run: vendor/bin/phpunit
