@@ -65,6 +65,11 @@ jobs:
       run: |
         composer clear-cache
         php artisan optimize:clear
+      env:
+        APP_ENV: testing
+        CACHE_DRIVER: array
+        DB_CONNECTION: sqlite
+        DB_DATABASE: ':memory:'
 
     - name: Run PHPUnit Tests
       run: php artisan test
