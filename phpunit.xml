@@ -29,6 +29,8 @@
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
-        <env name="MIX_MANIFEST_PATH" value="/dev/null"/>
+        
+        <env name="VITE_BUILD_PATH" value="."/>
+        <env name="VITE_MANIFEST_PATH" value="/dev/null"/>
     </php>
 </phpunit>
