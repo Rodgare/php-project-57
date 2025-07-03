@@ -60,16 +60,16 @@ jobs:
 
     - name: Run PHPStan (Static Analysis/Linting)
       run: ./vendor/bin/phpstan analyse app
-    
-    - name: Clear Laravel and Composer caches
-      run: |
-        composer clear-cache
-        php artisan optimize:clear
-      env:
-        APP_ENV: testing
-        CACHE_DRIVER: array
-        DB_CONNECTION: sqlite
-        DB_DATABASE: ':memory:'
+
+#    - name: Clear Laravel and Composer caches
+#      run: |
+#        composer clear-cache
+#        php artisan optimize:clear
+#      env:
+#        APP_ENV: testing
+#        CACHE_DRIVER: array
+#        DB_CONNECTION: sqlite
+ #       DB_DATABASE: ':memory:'
 
     - name: Run PHPUnit Tests
       run: php artisan test
