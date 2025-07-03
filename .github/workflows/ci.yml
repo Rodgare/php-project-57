@@ -60,6 +60,11 @@ jobs:
 
     - name: Run PHPStan (Static Analysis/Linting)
       run: ./vendor/bin/phpstan analyse app
+    
+    - name: Clear Laravel and Composer caches
+      run: |
+        composer clear-cache
+        php artisan optimize:clear
 
     - name: Run PHPUnit Tests
       run: php artisan test
