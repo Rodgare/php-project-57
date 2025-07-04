@@ -57,10 +57,6 @@ jobs:
 
     - name: Build frontend assets
       run: npm run build
-    
-    - name: Get npm cache directory
-      id: npm-cache
-      run: echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       
     - name: Copy .env.example
       run: cp .env.example .env
